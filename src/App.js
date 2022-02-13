@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useContext } from "react";
 
-function App() {
+
+import Quizz from "./components/Quizz/Quizz";
+// import Audio from './components/audio/Audio';
+import questions from "./components/questions/questions";
+
+import Play from "./components/audio/Play";
+import Player from "./components/audio/Player";
+import Counter from "./components/Counter/Counter";
+import AppProvider, { AppContext } from "./context/AppContext";
+import Home from './Home';
+import NewCounter from "./components/Counter/NewCounter";
+
+export default function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppProvider value={{AppContext}}>
+        <Home />
+        {/* <NewCounter /> */}
+    </AppProvider>
   );
 }
-
-export default App;
