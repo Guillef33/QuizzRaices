@@ -10,15 +10,20 @@ body {
   font-family: "Verdana", cursive, sans-serif;
   color: #ffffff;
 }
-
-body {
-  background-color: #252d4a;
+ body {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  align-items: center; 
+  height: 100vh;
 }
 
+.container video {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 
 .app {
   background-color: #252d4a;

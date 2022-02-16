@@ -10,6 +10,11 @@ import Play from "./components/audio/Play";
 import Player from "./components/audio/Player";
 import Counter from "./components/Counter/Counter";
 
+  import BackVideo from "./assets/backgroundvideo.mp4";
+    import BackVideo2 from "./assets/backVideo.mp4";
+
+
+
 function Home() {
   const {
     showScore,
@@ -29,8 +34,14 @@ function Home() {
     showGame();
     setStatus(STATUS.STARTED);
   };
+
+
   return (
     <div className="container">
+      <video loop autoPlay muted>
+        <source src={BackVideo2} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <Player />
       {showQuizz ? (
         <div className="app">
