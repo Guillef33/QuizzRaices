@@ -91,6 +91,12 @@ function AppProvider(props) {
     // passing null stops the interval
   );
 
+    function handleClose() {
+      console.log(showQuizz);
+      setShowQuizz(false);
+      setStatus(STATUS.STOPPED);
+    }
+
   return (
     <AppContext.Provider
       value={{
@@ -109,7 +115,8 @@ function AppProvider(props) {
         twoDigits,
         useInterval,
         handleStart,
-        losing
+        losing,
+        handleClose,
       }}
     >
       {props.children}

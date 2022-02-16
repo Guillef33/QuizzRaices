@@ -17,7 +17,6 @@ export default function App() {
   return (
     <AppProvider value={{AppContext}}>
         <Home />
-        {/* <NewCounter /> */}
     </AppProvider>
   );
 }

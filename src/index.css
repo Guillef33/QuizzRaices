@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10,11 +10,18 @@ body {
   font-family: "Verdana", cursive, sans-serif;
   color: #ffffff;
 }
- body {
+body {
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   height: 100vh;
+}
+
+@media screen and (max-width: 760px) {
+  .container video {
+    height: 100vh;
+    width: 100vw;
+  }
 }
 
 .container video {
@@ -37,7 +44,6 @@ body {
   justify-content: space-evenly; */
 }
 
-
 .score-section {
   display: flex;
   font-size: 24px;
@@ -45,7 +51,6 @@ body {
 }
 
 /* QUESTION/TIMER/LEFT SECTION */
-
 
 question-container {
   width: 600px;
@@ -56,14 +61,12 @@ question-container {
   justify-content: center;
 }
 .question-section {
-
 }
 
 .question-image {
   width: 400px;
   height: 200px;
   object-fit: cover;
-
 }
 
 .question-count {
@@ -107,7 +110,6 @@ question-container {
   border: none;
 }
 
-
 .correct {
   background-color: #2f922f;
 }
@@ -117,7 +119,7 @@ question-container {
 }
 
 button:hover {
-color:white;
+  color: white;
   background-color: hsl(345, 95%, 68%);
 }
 

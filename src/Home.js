@@ -13,7 +13,7 @@ import Counter from "./components/Counter/Counter";
   import BackVideo from "./assets/backgroundvideo.mp4";
     import BackVideo2 from "./assets/backVideo.mp4";
 
-
+import InitialText from "./components/InitialText/InitialText";
 
 function Home() {
   const {
@@ -42,6 +42,7 @@ function Home() {
         <source src={BackVideo2} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+
       <Player />
       {showQuizz ? (
         <div className="app">
@@ -52,15 +53,17 @@ function Home() {
             questions={questions}
             restartGame={restartGame}
             handleAnswerOptionClick={handleAnswerOptionClick}
+            setShowQuizz={setShowQuizz}
           />
         </div>
       ) : (
-        <button className="playGameButton" onClick={StartGame}>
-          Jugar
-        </button>
+        <>
+          <InitialText />
+          <button className="playGameButton" onClick={StartGame}>
+            Jugar
+          </button>
+        </>
       )}
-      {/* <Play /> */}
-
       <Counter />
     </div>
   );

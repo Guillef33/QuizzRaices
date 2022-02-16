@@ -10,7 +10,13 @@ function Quizz() {
     score,
     restartGame,
     handleAnswerOptionClick,
+    setShowQuizz,
+    showQuizz,
+    handleClose
   } = useContext(AppContext);
+
+
+
 
   return (
     <>
@@ -21,6 +27,7 @@ function Quizz() {
         </div>
       ) : (
         <div className="question-container">
+          <button onClick={handleClose}>X</button>
           <div className="question-section">
             <div className="question-count">
               <span>Question {currentQuestion + 1}</span>/{questions.length}
