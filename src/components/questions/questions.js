@@ -9,22 +9,22 @@ import RaicesBack8 from "../../assets/back8.jpg";
 
 const questions = [
   {
-    questionText: "What is the capital of France?",
+    questionText: "Which is the variety in Spain most planted?",
     answerOptions: [
-      { answerText: "New York", isCorrect: false },
-      { answerText: "London", isCorrect: false },
-      { answerText: "Paris", isCorrect: true },
-      { answerText: "Dublin", isCorrect: false },
+      { answerText: "Garnacha", isCorrect: false },
+      { answerText: "Airen", isCorrect: false },
+      { answerText: "Bobal", isCorrect: true },
+      { answerText: "Tempranillo ", isCorrect: false },
+      { answerText: "Albariño ", isCorrect: false },
     ],
     image: RaicesBack1,
   },
   {
-    questionText: "Who is CEO of Tesla?",
+    questionText: "Which is the region where the Garnacha was born?",
     answerOptions: [
-      { answerText: "Jeff Bezos", isCorrect: false },
-      { answerText: "Elon Musk", isCorrect: true },
-      { answerText: "Bill Gates", isCorrect: false },
-      { answerText: "Tony Stark", isCorrect: false },
+      { answerText: "Aragón", isCorrect: false },
+      { answerText: "Cataluña", isCorrect: true },
+      { answerText: "Rioja", isCorrect: false },
     ],
     image: RaicesBack2,
   },
