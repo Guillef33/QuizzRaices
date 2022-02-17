@@ -56,3 +56,16 @@
     align-items: center;
   }
 }
+
+
+.Normal {
+  color: gray !important;
+}
+
+.Danger {
+  color: red !important;
+}
+
+.Finished {
+  border: blue !important;
+}

@@ -28,12 +28,9 @@ function Home() {
     setShowQuizz,
     setStatus,
     STATUS,
+    StartGame,
   } = useContext(AppContext);
 
-  const StartGame = () => {
-    showGame();
-    setStatus(STATUS.STARTED);
-  };
 
 
   return (

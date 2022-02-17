@@ -64,7 +64,7 @@ const questions = [
   {
     questionText: "Is it Rufete red, white or both?",
     answerOptions: [
-      { answerText: "White", isCorrect: false },
+      { answerText: "White", isCorrect: true },
       { answerText: "Red", isCorrect: false },
       { answerText: "Both", isCorrect: false },
     ],
@@ -73,7 +73,7 @@ const questions = [
   {
     questionText: "Is Albarin related to Alrariño?",
     answerOptions: [
-      { answerText: "Yes", isCorrect: false },
+      { answerText: "Yes", isCorrect: true },
       { answerText: "No", isCorrect: false },
     ],
     image: RaicesBack6,
@@ -81,7 +81,7 @@ const questions = [
   {
     questionText: "Malvar is a variety that can be found in?",
     answerOptions: [
-      { answerText: "Madrid", isCorrect: false },
+      { answerText: "Madrid", isCorrect: true },
       { answerText: "Jerez", isCorrect: false },
       { answerText: "Galicia", isCorrect: false },
     ],
@@ -91,7 +91,7 @@ const questions = [
     questionText: "Mazuela is from?",
     answerOptions: [
       { answerText: "Rioja", isCorrect: false },
-      { answerText: "Cariñena", isCorrect: false },
+      { answerText: "Cariñena", isCorrect: true },
       { answerText: "Priorat", isCorrect: false },
       { answerText: "All", isCorrect: true },
     ],

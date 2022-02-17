@@ -14,6 +14,22 @@ function AppProvider(props) {
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
 
+    
+  const STATUS = {
+    STARTED: "Started",
+    STOPPED: "Stopped",
+  };
+
+  // Parte del contador
+  const INITIAL_COUNT = 10;
+
+  const [secondsRemaining, setSecondsRemaining] = useState(INITIAL_COUNT);
+  const [status, setStatus] = useState(STATUS.STOPPED);
+
+  const [losing, SetLosing] = useState(false);
+
+  const secondsToDisplay = secondsRemaining;
+
   const handleAnswerOptionClick = (isCorrect) => {
     if (isCorrect) {
       setScore(score + 1);
@@ -30,29 +46,22 @@ function AppProvider(props) {
   const restartGame = (e) => {
     setShowScore(false);
     setCurrentQuestion(0);
+    setSecondsRemaining(INITIAL_COUNT);
+  };
+
+  
+  const StartGame = () => {
+    showGame();
+    setStatus(STATUS.STARTED);
+    setSecondsRemaining(INITIAL_COUNT);
+        setCurrentQuestion(0);
+
   };
 
   function showGame() {
     setShowQuizz(true);
   }
 
-  const STATUS = {
-    STARTED: "Started",
-    STOPPED: "Stopped",
-  };
-
-  const INITIAL_COUNT = 90;
-
-  const [secondsRemaining, setSecondsRemaining] = useState(INITIAL_COUNT);
-  const [status, setStatus] = useState(STATUS.STOPPED);
-
-  const [losing, SetLosing] = useState(false);
-
-  // if (secondsRemaining < 88) {
-  //   SetLosing(true);
-  // }
-
-  const secondsToDisplay = secondsRemaining;
 
   const handleStart = () => {
     setStatus(STATUS.STARTED);
@@ -117,6 +126,8 @@ function AppProvider(props) {
         handleStart,
         losing,
         handleClose,
+        setShowQuizz,
+        StartGame,
       }}
     >
       {props.children}

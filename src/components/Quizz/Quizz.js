@@ -12,8 +12,6 @@ function Quizz() {
     score,
     restartGame,
     handleAnswerOptionClick,
-    setShowQuizz,
-    showQuizz,
     handleClose,
   } = useContext(AppContext);
 
@@ -22,6 +20,9 @@ function Quizz() {
       {showScore ? (
         <div className="score-section">
           <h2>You scored {score} out of {questions.length}</h2>
+          {/* {losing 
+
+          } */}
           <p>
             SHOCKED WITH THE RESULTS? Congratulations, there is still much to
             learn! <br />
@@ -31,6 +32,9 @@ function Quizz() {
             HALL 14, every day we will be uncovering a new autochthonous variety
             or an unknown DO.
           </p>
+          
+          {/* Aca deberia ir el mensaje de Perdiste, se te acbo el t */}
+
           <button onClick={(e) => restartGame(e)}>Play Again</button>
         </div>
       ) : (
