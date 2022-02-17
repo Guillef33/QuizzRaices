@@ -12,20 +12,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-      background-color: #252d4a;
-
+  background-color: #f3f3f3;
 }
-
-@media screen and (max-width: 760px) {
-  .container video {
-    height: 100vh;
-    width: 100vw;
-  }
-}
-/* 
-.container-box {
-
-} */
 
 .container video {
   position: absolute;
@@ -63,7 +51,6 @@ question-container {
   align-items: center;
   justify-content: center;
 }
-
 
 .question-image {
   width: 400px;
@@ -131,4 +118,23 @@ button:focus {
 
 button svg {
   margin-right: 5px;
+}
+
+@media screen and (max-width: 760px) {
+  .container video {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .question-container {
+    padding: 40px;
+  }
+
+  .playGameButton {
+    width: 300px;
+  }
+
+  .question-image {
+    width: 300px;
+  }
 }
