@@ -30,7 +30,7 @@ const questions = [
   },
   {
     questionText:
-      "TALKING ABOUT ARAGON, WHICH OF THE FOLLOWING WINE REGIONS BELONG TO THE REGION?",
+      "Talking about Aragon, which of the following wine regions belong to the region?",
     answerOptions: [
       { answerText: "Calatayud", isCorrect: true },
       { answerText: "Utiel Requena", isCorrect: false },
@@ -46,7 +46,7 @@ const questions = [
     image: RaicesBack3,
   },
   {
-    questionText: "SELECT 5 AUTOCHTHONOUS VARIETIES FROM SPAIN?",
+    questionText: "Select 5 autochthonous varieties from Spain?",
     answerOptions: [
       { answerText: "Cigales", isCorrect: false },
       { answerText: "Somontano", isCorrect: false },
@@ -62,7 +62,7 @@ const questions = [
     image: RaicesBack4,
   },
   {
-    questionText: " IS IT RUFETE RED, WHITE OR BOTH?",
+    questionText: "Is it Rufete red, white or both?",
     answerOptions: [
       { answerText: "White", isCorrect: false },
       { answerText: "Red", isCorrect: false },
@@ -71,7 +71,7 @@ const questions = [
     image: RaicesBack5,
   },
   {
-    questionText: "IS ALBARIN RELATED TO ALBARIÑO?",
+    questionText: "Is Albarin related to Alrariño?",
     answerOptions: [
       { answerText: "Yes", isCorrect: false },
       { answerText: "No", isCorrect: false },
@@ -79,7 +79,7 @@ const questions = [
     image: RaicesBack6,
   },
   {
-    questionText: "MALVAR IS A VARIETY THAT CAN BE FOUND IN?",
+    questionText: "Malvar is a variety that can be found in?",
     answerOptions: [
       { answerText: "Madrid", isCorrect: false },
       { answerText: "Jerez", isCorrect: false },
@@ -88,7 +88,7 @@ const questions = [
     image: RaicesBack7,
   },
   {
-    questionText: "MAZUELA IS FROM?",
+    questionText: "Mazuela is from?",
     answerOptions: [
       { answerText: "Rioja", isCorrect: false },
       { answerText: "Cariñena", isCorrect: false },

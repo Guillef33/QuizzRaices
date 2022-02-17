@@ -14,7 +14,7 @@ function Counter() {
           <h2 className={losing ? "danger" : ""}>
             {twoDigits(secondsToDisplay)}
           </h2>
-          <p>Segundos</p>
+          <p>Seconds</p>
         </div>
       </div>
     </div>

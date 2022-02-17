@@ -68,6 +68,7 @@ question-container {
 
 .question-text {
   margin-bottom: 12px;
+  text-transform: capitalize;
 }
 
 .timer-text {
