@@ -1,22 +1,23 @@
 import React, { useState, useContext } from "react";
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
-
-import Quizz from "./components/Quizz/Quizz";
-// import Audio from './components/audio/Audio';
-import questions from "./components/questions/questions";
-
-import Play from "./components/audio/Play";
-import Player from "./components/audio/Player";
-import Counter from "./components/Counter/Counter";
 import AppProvider, { AppContext } from "./context/AppContext";
-import Home from './Home';
-import NewCounter from "./components/Counter/NewCounter";
+import Home from './pages/Home';
+import Box from "./pages/Box";
+import NotFound from './pages/NotFound';
+
 
 export default function App() {
 
   return (
-    <AppProvider value={{AppContext}}>
-        <Home />
+    <AppProvider value={{ AppContext }}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
+          <Route path="/box" element={<Box />} />
+        </Routes>
+      </BrowserRouter>
     </AppProvider>
   );
 }

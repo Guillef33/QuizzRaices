@@ -1,19 +1,19 @@
 import React, { useContext } from "react";
 
-import AppProvider, { AppContext } from "./context/AppContext";
+import AppProvider, { AppContext } from "../context/AppContext";
 
-import Quizz from "./components/Quizz/Quizz";
+import Quizz from "../components/Quizz/Quizz";
 // import Audio from './components/audio/Audio';
-import questions from "./components/questions/questions";
+import questions from "../components/questions/questions";
 
-import Play from "./components/audio/Play";
-import Player from "./components/audio/Player";
-import Counter from "./components/Counter/Counter";
+import Play from "../components/audio/Play";
+import Player from "../components/audio/Player";
+import Counter from "../components/Counter/Counter";
 
-  import BackVideo from "./assets/backgroundvideo.mp4";
-    import BackVideo2 from "./assets/backVideo.mp4";
+  import BackVideo from "../assets/backgroundvideo.mp4";
+    import BackVideo2 from "../assets/backVideo.mp4";
 
-import InitialText from "./components/InitialText/InitialText";
+import InitialText from "../components/InitialText/InitialText";
 
 function Home() {
   const {
@@ -60,7 +60,7 @@ function Home() {
         <>
           <InitialText />
           <button className="playGameButton" onClick={StartGame}>
-            Jugar
+            Start
           </button>
         </>
       )}
