@@ -10,10 +10,13 @@ import Play from "../components/audio/Play";
 import Player from "../components/audio/Player";
 import Counter from "../components/Counter/Counter";
 
-  import BackVideo from "../assets/backgroundvideo.mp4";
-    import BackVideo2 from "../assets/backVideo.mp4";
+import BackVideo from "../assets/backgroundvideo.mp4";
+import BackVideo2 from "../assets/backVideo.mp4";
 
 import InitialText from "../components/InitialText/InitialText";
+
+import CircularProgressBar from "../components/Counter/CircularProgressBar";
+import CircularProgressWithLabel from "../components/Counter/MaterialProgress";
 
 function Home() {
   const {
@@ -31,8 +34,6 @@ function Home() {
     StartGame,
   } = useContext(AppContext);
 
-
-
   return (
     <div className="container">
       <video loop autoPlay muted>
@@ -40,18 +41,25 @@ function Home() {
         Your browser does not support the video tag.
       </video>
 
-      <Player />
       {showQuizz ? (
-        <div className="app">
-          <Quizz
-            currentQuestion={currentQuestion}
-            showScore={showScore}
-            score={score}
-            questions={questions}
-            restartGame={restartGame}
-            handleAnswerOptionClick={handleAnswerOptionClick}
-            setShowQuizz={setShowQuizz}
-          />
+        <div className="game-container">
+          <div className="app">
+            <Quizz
+              currentQuestion={currentQuestion}
+              showScore={showScore}
+              score={score}
+              questions={questions}
+              restartGame={restartGame}
+              handleAnswerOptionClick={handleAnswerOptionClick}
+              setShowQuizz={setShowQuizz}
+            />
+          </div>
+
+          <Player />
+          {/* <CircularProgressBar /> */}
+          <div className="Counter">
+            <CircularProgressWithLabel />
+          </div>
         </div>
       ) : (
         <>
@@ -61,7 +69,7 @@ function Home() {
           </button>
         </>
       )}
-      <Counter />
+      {/* <Counter /> */}
     </div>
   );
 }

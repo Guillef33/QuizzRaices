@@ -19,7 +19,9 @@ function Quizz() {
     <>
       {showScore ? (
         <div className="score-section">
-          <h2>You scored {score} out of {questions.length}</h2>
+          <h2>
+            You scored {score} out of {questions.length}
+          </h2>
           {/* {losing 
 
           } */}
@@ -32,7 +34,7 @@ function Quizz() {
             HALL 14, every day we will be uncovering a new autochthonous variety
             or an unknown DO.
           </p>
-          
+
           {/* Aca deberia ir el mensaje de Perdiste, se te acbo el t */}
 
           <button onClick={(e) => restartGame(e)}>Play Again</button>
@@ -56,17 +58,26 @@ function Quizz() {
               {questions[currentQuestion].questionText}
             </div>
           </div>
-          {/* {console.log(questions.length)} */}
           <div className="answer-section">
             {questions[currentQuestion].answerOptions.map((answerOption) => (
-              <button
-                className="playGameButton"
-                onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}
-              >
-                {answerOption.answerText}
-              </button>
+              <>
+                <button
+                  className="playGameButton"
+                  onClick={() =>
+                    handleAnswerOptionClick(answerOption.isCorrect)
+                  }
+                >
+                  {answerOption.answerText}
+                </button>
+              </>
             ))}
           </div>
+          <button
+            className="playGameButton"
+            onClick={() => handleAnswerOptionClick()}
+          >
+            Next
+          </button>
         </div>
       )}
     </>

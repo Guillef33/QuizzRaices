@@ -21,7 +21,7 @@ function AppProvider(props) {
   };
 
   // Parte del contador
-  const INITIAL_COUNT = 10;
+  const INITIAL_COUNT = 90;
 
   const [secondsRemaining, setSecondsRemaining] = useState(INITIAL_COUNT);
   const [status, setStatus] = useState(STATUS.STOPPED);
@@ -30,7 +30,7 @@ function AppProvider(props) {
 
   const secondsToDisplay = secondsRemaining;
 
-  const handleAnswerOptionClick = (isCorrect) => {
+  const handleAnswerOptionClick = (isCorrect) => {  
     if (isCorrect) {
       setScore(score + 1);
     }
@@ -48,7 +48,6 @@ function AppProvider(props) {
     setCurrentQuestion(0);
     setSecondsRemaining(INITIAL_COUNT);
   };
-
   
   const StartGame = () => {
     showGame();
